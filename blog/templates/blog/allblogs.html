@@ -33,7 +33,7 @@
                   <a class="nav-link" href="#">Resume</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                  <a class="nav-link active" href="#">Blog</a>
                 </li>
                 
               </ul>
@@ -42,41 +42,32 @@
     </header>
 
     <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Walt's page</h1>
-          <p class="lead text-muted">Learning Full Stack Development with Django, Bootstrap, and Python</p>
-          <p>
-            <a href="mailto:wshields1711@gmail.com" class="btn btn-primary my-2">Email me</a>
-            
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-
-            {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="{{ job.image.url }}" />
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary}}</p>
-                  
-                </div>
-              </div>
-            </div>
-           
-            {% endfor %}
-            <div class="col-md-4"></div>
+     <div class="container">  
+      <h1 class="text-center pt-3">Blog</h1>
+      <br />
+      <br /> 
+      <h2>Latest Blogs</h2>
+      <hr>
+             
+    
               
-          </div>
-        </div>
-      </div>
-
+    
+         {% for blog in blogs.all %}
+                
+         <a href=""><h3>  {{ blog.title }} </h3>
+         
+         {{blog.body}}
+         <br />
+         <img class="img-fluid" src="{{ blog.image.url }}" width=320 />
+         <br />
+         {{blog.pub_date}}            
+                      
+              
+              
+              
+                
+        {% endfor %}
+                
     </main>
 
     <footer class="text-muted">
