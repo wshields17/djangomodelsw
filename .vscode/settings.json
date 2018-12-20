@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\basementbed\\envs\\myproject\\Scripts\\python.exe"
+    "python.pythonPath": "djenv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }
