@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "djenv\\Scripts\\python.exe",
+    "python.pythonPath": "myenvdj\\Scripts\\python.exe",
     "git.ignoreLimitWarning": true
 }
